@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+* {
+    font-family: 'Schoolbell', cursive;
+    font-weight: lighter;
+
+}
+
+body{
+    font-family: 'Schoolbell', cursive;
+    background: whitesmoke url(/assets/images/bg-lines.png) repeat center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.20);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.wrong-letter span {
+    font-size: 3rem;
+    margin: 0.5rem;
+}
+
+.secret-word-content span {
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+/* .key-style-btn {
+    background-color: wheat;
+    padding: 15px;
+} */
+

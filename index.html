@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <header>
+        <h1>Hello world :D</h1>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="hangman">
+                <img src="/assets/images/hangman-0.png" id="hangman" width="450px" alt="Boneco jogo da forca">
+            </div>
+            
+            <div class="wrong-letter"></div>
+        </div>
+        <div class="secret-word-content">
+        </div>
+
+        <!-- <div class="keyboard-content">
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+            <span>D</span>
+            <span>E</span>
+            <span>F</span>
+            <span>G</span>
+            <span>H</span>
+            <span>I</span>
+            <span>J</span>
+            <span>K</span>
+            <span>L</span>
+            <span>M</span>
+            <span>N</span>
+            <span>O</span>
+            <span>P</span>
+            <span>Q</span>
+            <span>R</span>
+            <span>S</span>
+            <span>T</span>
+            <span>U</span>
+            <span>V</span>
+            <span>W</span>
+            <span>X</span>
+            <span>Y</span>
+            <span>Z</span>
+        </div> -->
+
+        <div class="modal">
+            <select id="theme_Id">
+                <option value="0" selected>Alimentos</option>
+                <option value="1">Animais</option>
+                <option value="2">Objetos</option>
+            </select>
+            <div class="addWord">
+                <input type="text" id="addWord">
+                <button>Adicionar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Desenvolvido por <a href="https://github.com/joaopedromachado" target="_blank">João Pedro Machado</a>.</h2>
+    </footer>
+
+    <script src="/scripts/word_list.js"></script>
+    <script src="/scripts/selector.js"></script>
+    <script src="/scripts/game.js"></script>
+    <script src="/scripts/modal.js"></script>
+</body>
+</html>
