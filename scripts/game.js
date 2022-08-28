@@ -1,11 +1,7 @@
 import {selectRandomWord} from './selector.js';
-import {showCorrectWord, showWrongWord} from './showcorrectword.js';
+import {showCorrectWord, showWrongWord} from './showuserword.js';
 import {restartGame} from './restart.js';
 
-const keys = document.querySelectorAll(".keyboard-content span");
-const div = document.querySelector(".secret-word-content");
-const div2 = document.querySelector(".wrong-letter");
-// const img = document.getElementById("hangman");
 const reset = document.getElementById("reset");
 
 const game = {
@@ -63,24 +59,4 @@ const checkGame = () => {
 // Criar uma função anonima para executar a função exportada
 reset.addEventListener("click", ()=>{
     restartGame(game);
-})
-
-console.log(game.word);
-
-// const createKeyboard = () => {
-    //     keys.forEach(key => {
-        //         key.classList.add("key-style-btn")
-//         key.addEventListener("click", (event) => {
-//             let current = event.target.innerText;
-//             console.log(current)
-//             return current;
-//         })
-//     })
-// };
-
-// const createElement = () => {
-    
-    
-// }
-
-// createKeyboard();
+});
