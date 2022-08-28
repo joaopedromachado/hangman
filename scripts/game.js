@@ -65,6 +65,8 @@ reset.addEventListener("click", ()=>{
     restartGame(game);
 })
 
+console.log(game.word);
+
 // const createKeyboard = () => {
     //     keys.forEach(key => {
         //         key.classList.add("key-style-btn")
