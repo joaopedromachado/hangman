@@ -3,6 +3,7 @@ import {showCorrectWord, showWrongWord} from './showuserword.js';
 import {restartGame} from './restart.js';
 
 const reset = document.getElementById("reset");
+const gameStatus = document.querySelector(".game-status");
 
 const game = {
     wrongLetter: [],
@@ -50,9 +51,9 @@ const createHangman = () => {
 const checkGame = () => {
     const div = document.querySelector(".secret-word-content");
     if (div.innerText === game.word) {
-        alert("Ganhou")
+        gameStatus.innerText = "Ganhou :D"
     } else if (game.wrongLetter.length == 7){
-        alert("perdeu");
+        gameStatus.innerText = "Perdeu :C"
     }
 };
 

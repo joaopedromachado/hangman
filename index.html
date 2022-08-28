@@ -10,22 +10,28 @@
 </head>
 <body>
     <header>
-        <h1>JOGO DA FORCA :D</h1>
+        <h1>Forca JS</h1>
+        <div class="newgame">
+            Novo Jogo
+        </div>
     </header>
 
     <main>
 
         <div class="container">
             <div class="hangman">
-                <img src="./assets/images/hangman-0.png" id="hangman" width="450px" alt="Boneco jogo da forca">
+                <img src="./assets/images/hangman-0.png" id="hangman" width="350px" alt="Boneco jogo da forca">
             </div>
             
-            <div class="wrong-letter"></div>
-        </div>
-        <div class="secret-word-content">
+            <div class="wrong-letter"><h1>Utilize o teclado para jogar!!!</h1></div>
         </div>
 
-        <button id="reset">Resetar</button>
+        <div class="container-user-status">
+            <div class="game-status"></div>
+            <div class="secret-word-content">
+            </div>
+        </div>
+
 
         <!-- <div class="keyboard-content">
             <span>A</span>
@@ -56,12 +62,13 @@
             <span>Z</span>
         </div> -->
 
-        <div class="modal">
+        <div class="container-modal">
             <select id="theme_Id">
                 <option value="0" selected>Alimentos</option>
                 <option value="1">Animais</option>
                 <option value="2">Objetos</option>
             </select>
+            <button id="reset">Resetar</button>
             <div class="addWord">
                 <input type="text" id="addWord">
                 <button>Adicionar</button>
@@ -74,6 +81,6 @@
     </footer>
 
     <script type="module" src="./scripts/game.js"></script>
-    <!-- <script src="./scripts/modal.js"></script> -->
+    <script src="./scripts/modal.js"></script>
 </body>
 </html>

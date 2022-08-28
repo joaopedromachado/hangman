@@ -8,7 +8,7 @@ export const restartGame = (game) => {
     game.wrongLetter.length = 0;
     game.correctLetter.length = 0;
     game.word = selectRandomWord();
-    div.innerText = "";
+    div.innerText = ""; 
     div2.innerText = "";
     img.src = `./assets/images/hangman-0.png`;
 };
