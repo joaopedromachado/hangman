@@ -39,7 +39,7 @@ const palavras = {
     ]
 };
 
-const theme_Selector = [
+export const theme_Selector = [
     palavras.alimentos,
     palavras.animais, 
     palavras.objetos,

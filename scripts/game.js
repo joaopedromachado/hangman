@@ -1,18 +1,25 @@
-// criar elemento, elemento recebe valor
-const keys = document.querySelectorAll(".keyboard-content span");
-// const div = document.querySelector(".keyboard-content");
+import {selectRandomWord} from './selector.js';
+import {showCorrectWord, showWrongWord} from './showcorrectword.js';
+import {restartGame} from './restart.js';
 
-var game = {
+const keys = document.querySelectorAll(".keyboard-content span");
+const div = document.querySelector(".secret-word-content");
+const div2 = document.querySelector(".wrong-letter");
+// const img = document.getElementById("hangman");
+const reset = document.getElementById("reset");
+
+const game = {
     wrongLetter: [],
     correctLetter: [],
     word: selectRandomWord()
-}
+};
 
 document.addEventListener("keydown", (event) => {
     const key = event.keyCode; // 65 - 90 (Intervalo)
-
+    
     if(isLetter(key)){
-        const LETTER = event.key;
+        const LETTER = event.key.toUpperCase();
+        console.log(game.word)
         if (game.wrongLetter.includes(LETTER)) {
             console.log("Letra repetida")
         } else {
@@ -31,52 +38,36 @@ const isLetter = (code) => {
 }
 
 const updateGame = () => {
-    showCorrectWord();
-    showWrongWord();
+    showCorrectWord(game);
+    showWrongWord(game);
     createHangman();
     checkGame();
 }
 
-const showCorrectWord = () => {
-    const div = document.querySelector(".secret-word-content");
-    var getWord = game.word.split("");
-    div.innerHTML = "";
-    getWord.forEach(word => {  
-        if(game.correctLetter.includes(word)){
-            div.innerHTML += `<span>${word}</span>`
-        } else {
-            div.innerHTML += `<span>_</span>`
-        }
-    })
-}
-
-const showWrongWord = () => {
-    const div2 = document.querySelector(".wrong-letter");
-    div2.innerHTML = "<h2>Letras Erradas</h2>";
-    game.wrongLetter.forEach((letter) => {
-        div2.innerHTML += `<span >${letter}</span>`;
-    });
-}
 
 const createHangman = () => {
     const img = document.getElementById("hangman");
     let parts = game.wrongLetter.length;
-    img.src = `./assets/images/hangman-${parts}.png`
+    img.src = `./assets/images/hangman-${parts}.png`;
 };
 
 const checkGame = () => {
     const div = document.querySelector(".secret-word-content");
     if (div.innerText === game.word) {
         alert("Ganhou")
-    } else if (game.wrongLetter.length === 7){
+    } else if (game.wrongLetter.length == 7){
         alert("perdeu");
     }
 };
 
+// Criar uma função anonima para executar a função exportada
+reset.addEventListener("click", ()=>{
+    restartGame(game);
+})
 
 // const createKeyboard = () => {
     //     keys.forEach(key => {
-//         key.classList.add("key-style-btn")
+        //         key.classList.add("key-style-btn")
 //         key.addEventListener("click", (event) => {
 //             let current = event.target.innerText;
 //             console.log(current)

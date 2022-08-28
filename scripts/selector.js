@@ -1,3 +1,5 @@
+import { theme_Selector } from "./word_list.js";
+
 const input = document.getElementById("addWord");
 var select = document.querySelector("#theme_Id");
 var value;
@@ -10,16 +12,16 @@ function themeSelector(value){
     return value;
 };
 
-const arrayList = (arr) => {
+export const arrayList = (arr) => {
     var arr = theme_Selector[themeSelector(value)];
     return arr;
 };
 
-function selectRandomWord() {
+export function selectRandomWord() {
     let arr = arrayList();
     let random = Math.floor(Math.random() * arr.length);
 
-    return arr[random];
+    return arr[random].toUpperCase();
 };
 
 input.addEventListener("change", () => {
