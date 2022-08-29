@@ -41,8 +41,3 @@ input.addEventListener("change", () => {
         console.log("Error.");
     }
 })
-
-
-// const arr = arrayList();
-// const typeTheme = themeSelector();
-

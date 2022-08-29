@@ -1,0 +1,11 @@
+
+.modal-alert {
+    position: absolute;
+    margin: auto;
+    animation: letterdown 2s ease-in-out;
+}
+
+@keyframes letterdown {
+    0%, 50% {top: 0px; opacity: 100%;}
+    55%, 100% {top: 10px;opacity: 0;}
+}

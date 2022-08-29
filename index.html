@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/modal.css">
     <title>Jogo da Forca</title>
 </head>
 <body>
     <header>
-        <h1>Forca JS</h1>
+        <h1>Hangman</h1>
         <div class="newgame">
             Novo Jogo
         </div>
@@ -63,15 +64,17 @@
         </div> -->
 
         <div class="container-modal">
-            <select id="theme_Id">
-                <option value="0" selected>Alimentos</option>
-                <option value="1">Animais</option>
-                <option value="2">Objetos</option>
-            </select>
-            <button id="reset">Resetar</button>
-            <div class="addWord">
-                <input type="text" id="addWord">
-                <button>Adicionar</button>
+            <div class="modal">
+                <select id="theme_Id">
+                    <option value="0" selected>Alimentos</option>
+                    <option value="1">Animais</option>
+                    <option value="2">Objetos</option>
+                </select>
+                <button id="reset">Resetar</button>
+                <div class="addWord">
+                    <input type="text" id="addWord">
+                    <button>Adicionar</button>
+                </div>
             </div>
         </div>
     </main>
@@ -81,6 +84,5 @@
     </footer>
 
     <script type="module" src="./scripts/game.js"></script>
-    <script src="./scripts/modal.js"></script>
 </body>
 </html>

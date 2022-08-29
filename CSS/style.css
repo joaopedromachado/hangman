@@ -40,15 +40,6 @@ header {
     border-color:#2497b9;
 }
 
-.container-modal {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.20);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-}
 
 main {
     display: flex;
@@ -92,7 +83,33 @@ main {
     background-color: wheat;
     padding: 15px;
 } */
+.container-modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.20);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.modal {
+    background-color: palegoldenrod;
+    padding: 15px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    margin: auto;
+    /* width: 50%; */
+}
 
 footer a {
     color: #00C2FF;
+    transition: 500ms;
+}
+
+footer a:hover{
+    color:#2497b9;
 }

@@ -1,40 +1,22 @@
+import * as modal from './modal.js';
 import {selectRandomWord} from './selector.js';
 import {showCorrectWord, showWrongWord} from './showuserword.js';
 import {restartGame} from './restart.js';
+import {showRepeatedLetter} from './modal.js';
+import { keyboard } from './keyboard.js';
 
 const reset = document.getElementById("reset");
 const gameStatus = document.querySelector(".game-status");
 
-const game = {
+export const game = {
     wrongLetter: [],
     correctLetter: [],
     word: selectRandomWord()
 };
 
-document.addEventListener("keydown", (event) => {
-    const key = event.keyCode; // 65 - 90 (Intervalo)
-    
-    if(isLetter(key)){
-        const LETTER = event.key.toUpperCase();
-        console.log(game.word)
-        if (game.wrongLetter.includes(LETTER)) {
-            console.log("Letra repetida")
-        } else {
-            if(game.word.includes(LETTER)){
-                game.correctLetter.push(LETTER);
-            } else {
-                game.wrongLetter.push(LETTER);
-            }
-        }
-        updateGame();
-    }
-})
+keyboard();
 
-const isLetter = (code) => {
-    return code >= 65 && code <= 90;
-}
-
-const updateGame = () => {
+export const updateGame = () => {
     showCorrectWord(game);
     showWrongWord(game);
     createHangman();
@@ -52,8 +34,10 @@ const checkGame = () => {
     const div = document.querySelector(".secret-word-content");
     if (div.innerText === game.word) {
         gameStatus.innerText = "Ganhou :D"
+        alert(`A palavra era ${game.word}`)
     } else if (game.wrongLetter.length == 7){
         gameStatus.innerText = "Perdeu :C"
+        alert(`A palavra era ${game.word}`)
     }
 };
 
