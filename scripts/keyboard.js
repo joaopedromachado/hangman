@@ -1,5 +1,4 @@
 import {game, updateGame} from './game.js'
-import { showRepeatedLetter } from './modal.js';
 
 export function keyboard() {
     document.addEventListener("keydown", (event) => {
@@ -8,11 +7,9 @@ export function keyboard() {
         if(isLetter(key)){
             const LETTER = event.key.toUpperCase();
             if (game.wrongLetter.includes(LETTER)) {
-                showRepeatedLetter();
             } else {
                 if(game.word.includes(LETTER)){
                     game.correctLetter.push(LETTER);
-                    showRepeatedLetter();
                 } else {
                     game.wrongLetter.push(LETTER);
                 }

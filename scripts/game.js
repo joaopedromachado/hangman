@@ -2,7 +2,6 @@
 import {selectRandomWord} from './selector.js';
 import {showCorrectWord, showWrongWord} from './showuserword.js';
 import {restartGame} from './restart.js';
-import {showRepeatedLetter} from './modal.js';
 import { keyboard } from './keyboard.js';
 import { createHangman } from './hangman.js';
 
@@ -35,3 +34,4 @@ const checkGame = () => {
 reset.addEventListener("click", ()=>{
     restartGame(game);
 });
+
