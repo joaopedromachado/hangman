@@ -17,3 +17,9 @@ html, body {
 a {
     text-decoration: none;
 }
+
+select, option, button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

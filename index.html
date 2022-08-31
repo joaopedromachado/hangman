@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1>Hangman</h1>
+        <h1 class="colorway">Hangman_</h1>
         <div class="newgame">
             Novo Jogo
         </div>
@@ -21,10 +21,10 @@
 
         <div class="container">
             <div class="hangman">
-                <img src="./assets/images/hangman-0.png" id="hangman" width="350px" alt="Boneco jogo da forca">
+                <img src="./assets/images/hangman-0.png" id="hangman" width="450px" alt="Boneco jogo da forca">
             </div>
             
-            <div class="wrong-letter"><h1>Utilize o teclado para jogar!!!</h1></div>
+            <div class="wrong-letter"><h1 class="colorway">Utilize o teclado para jogar!!!</h1></div>
         </div>
 
         <div class="container-user-status">
@@ -33,48 +33,19 @@
             </div>
         </div>
 
-
-        <!-- <div class="keyboard-content">
-            <span>A</span>
-            <span>B</span>
-            <span>C</span>
-            <span>D</span>
-            <span>E</span>
-            <span>F</span>
-            <span>G</span>
-            <span>H</span>
-            <span>I</span>
-            <span>J</span>
-            <span>K</span>
-            <span>L</span>
-            <span>M</span>
-            <span>N</span>
-            <span>O</span>
-            <span>P</span>
-            <span>Q</span>
-            <span>R</span>
-            <span>S</span>
-            <span>T</span>
-            <span>U</span>
-            <span>V</span>
-            <span>W</span>
-            <span>X</span>
-            <span>Y</span>
-            <span>Z</span>
-        </div> -->
-
         <div class="container-modal">
             <div class="modal">
+                <label for="select">ESCOLHA UM TEMA</label>
                 <select id="theme_Id">
                     <option value="0" selected>Alimentos</option>
                     <option value="1">Animais</option>
                     <option value="2">Objetos</option>
                 </select>
-                <button id="reset">Resetar</button>
                 <div class="addWord">
                     <input type="text" id="addWord">
                     <button>Adicionar</button>
                 </div>
+                <button id="reset">Confirmar</button>
             </div>
         </div>
     </main>
@@ -84,5 +55,6 @@
     </footer>
 
     <script type="module" src="./scripts/game.js"></script>
+    <script src="./scripts/colorway.js"></script>
 </body>
 </html>

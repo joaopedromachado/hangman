@@ -12,15 +12,18 @@ export const showRepeatedLetter = () => {
     div.className = "modal-alert"
     document.body.appendChild(div);
     div.innerText = "PALAVRA REPETIDA!!!"
-    setInterval(() => {
-        div.innerText = ""
-    }, 2000);
+    
+    setInterval(remove(), 2000)
 };
 
-function verifyElement(){
-    if(typeof(element) != 'undefined' && element != null){
-        document.body.removeChild(div);
-    }
+// function verifyElement(){
+//     if(typeof(element) != 'undefined' && element != null){
+//         document.body.removeChild(div);
+//     }
+// }
+
+function remove(){
+    document.body.removeChild(div);
 }
 
 

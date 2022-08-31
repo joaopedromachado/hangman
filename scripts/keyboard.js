@@ -7,9 +7,7 @@ export function keyboard() {
         
         if(isLetter(key)){
             const LETTER = event.key.toUpperCase();
-            console.log(game.word)
             if (game.wrongLetter.includes(LETTER)) {
-                console.log("Letra repetida")
                 showRepeatedLetter();
             } else {
                 if(game.word.includes(LETTER)){
@@ -27,3 +25,5 @@ export function keyboard() {
 const isLetter = (code) => {
     return code >= 65 && code <= 90;
 }
+
+keyboard();

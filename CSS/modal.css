@@ -1,7 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container-modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.20);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #00C2FF;
+    padding: 15px;
+    border-radius: 1rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    margin: auto;
+    /* width: 50%; */
+}
+
+.addWord{
+    display: none;
+}
+
+#reset {
+    padding: 10px;
+}
+
+label{
+    text-align: center;
+    color: aliceblue;
+}
+
+select, option {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+select, option, button, input, label {
+    font-family: 'Roboto', sans-serif;
+}
 
 .modal-alert {
     position: absolute;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
     animation: letterdown 2s ease-in-out;
 }
 

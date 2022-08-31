@@ -13,7 +13,7 @@ export const showCorrectWord = (game) => {
 
 export const showWrongWord = (game) => {
     const div2 = document.querySelector(".wrong-letter");
-    div2.innerHTML = "<h2>Letras Erradas</h2>";
+    div2.innerHTML = `<h2>Letras Erradas</h2>`
     game.wrongLetter.forEach((letter) => {
         div2.innerHTML += `<span >${letter}</span>`;
     });
