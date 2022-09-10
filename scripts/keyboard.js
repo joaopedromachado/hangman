@@ -1,4 +1,5 @@
 import {game, updateGame} from './game.js'
+import { modal } from './modal.js';
 
 const div = document.querySelector(".secret-word-content");
 
@@ -10,8 +11,9 @@ export function keyboard() {
             const LETTER = event.key.toUpperCase();
             if (game.wrongLetter.includes(LETTER)) {
             } else {
-                if(game.wrongLetter.length === 7 || div.innerText === game.word){
+                if(game.wrongLetter.length === 7 || div.innerText === game.word || modal.style.display === "flex"){
                     key = false;
+                    console.log("Desativado")
                 }else {
                     if(game.word.includes(LETTER)){
                         game.correctLetter.push(LETTER);

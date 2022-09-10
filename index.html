@@ -35,15 +35,22 @@
 
         <div class="container-modal">
             <div class="modal">
-                <label for="select">ESCOLHA UM TEMA</label>
-                <select id="theme_Id">
-                    <option value="0" selected>Alimentos</option>
-                    <option value="1">Animais</option>
-                    <option value="2">Objetos</option>
-                </select>
+                <div>
+                    <div id="closeBtn"></div>
+                </div>
+                <div class="themeSection">
+                    <label for="" style="color: #fff;">Selecione o tema</label>
+                    <select id="theme_Id">
+                        <option value="0" selected>🍔Alimentos</option>
+                        <option value="1">🐻Animais</option>
+                        <option value="2">📦Objetos</option>
+                        <option value="3">👨‍⚕️Profissão</option>
+                        <option value="4">🏃Verbos</option>
+                    </select>
+                </div>
                 <div class="addWord">
-                    <input type="text" id="addWord">
-                    <button>Adicionar</button>
+                    <input type="text" maxlength="20">
+                    <button type="submit" id="addWord">Adicionar</button>
                 </div>
                 <button id="reset">Confirmar</button>
             </div>
