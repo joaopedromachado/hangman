@@ -35,10 +35,7 @@
 #closeBtn{
     display: block;
     float: right;
-}
-#closeBtn::after {
     cursor: pointer;
-    content: url(./assets/images/Novo\ Projeto.svg);
 }
 .themeSection{
     display: flex;
