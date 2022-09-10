@@ -2,7 +2,7 @@
 
 .container-modal {
     display: none;
-    background-color: rgba(0, 0, 0, 0.20);
+    background-color: rgba(0, 0, 0, 0.80);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -21,13 +21,39 @@
     border-radius: 1rem;
     margin: auto;
 }
-
-.addWord{
-    display: none;
+.modal button {
+    background-color: rgb(255, 191, 0);;
+    border: 2px solid rgb(0, 32, 67);;
+    border-radius: 0.8rem;
+    padding: 8px;
+    transition: 300ms;
+}
+.modal button:hover{
+    color: aliceblue;
 }
 
-#reset {
-    padding: 10px;
+#closeBtn{
+    display: block;
+    float: right;
+}
+#closeBtn::after {
+    cursor: pointer;
+    content: url(./assets/images/Novo\ Projeto.svg);
+}
+.themeSection{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.addWord{
+    display: flex;
+    gap: 5px;
+}
+
+.addWord input{
+    border: 3px solid rgb(0, 32, 67);
+    border-radius: 5px;
 }
 
 label{
@@ -39,11 +65,22 @@ select, option {
     font-size: 20px;
     letter-spacing: 1px;
     padding: 5px;
-    border: 1px solid transparent;
+    border: 2px solid rgb(0, 32, 67);
+}
+select{
+    border-radius: 5px;
+}
+
+
+select:hover{
+    background-color: rgb(255, 191, 0);
+    color: aliceblue;
 }
 
 select, option, button, input, label {
     font-family: 'Roboto', sans-serif;
+    color: rgb(0, 32, 67);
+    outline: none;
 }
 
 .modal-alert {
