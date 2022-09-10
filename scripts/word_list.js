@@ -36,6 +36,26 @@ const palavras = {
         "travesseiro",
         "multiprocessador",
         "esterilizador"
+    ],
+    profissao: [
+        "advogado",
+        "arqueologo",
+        "atleta",
+        "camareira",
+        "cartunista",
+        "governador",
+        "pipoqueiro"
+    ],
+    verbos: [
+        "equilibrar",
+        "julgar",
+        "pedalar",
+        "carimbar",
+        "derramar",
+        "construir",
+        "monitorar",
+        "telefonar",
+        "colecionar"
     ]
 };
 
@@ -43,4 +63,6 @@ export const theme_Selector = [
     palavras.alimentos,
     palavras.animais, 
     palavras.objetos,
+    palavras.profissao,
+    palavras.verbos
 ];
